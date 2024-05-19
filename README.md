@@ -25,4 +25,89 @@ This advanced version of the Caesar Cipher program includes the following featur
 
 This advanced version enhances the functionality and usability of the Caesar Cipher program, making it suitable for real-world encryption and decryption tasks, including file encryption and integrity verification.
 
+**How to Get and Use CeaserGuard**
 
+### Step 1: Clone the Repository
+
+1. **Open Terminal**: Open your terminal (Command Prompt, PowerShell, or any terminal you use).
+
+2. **Clone the Repository**: Use the `git clone` command followed by the URL of your GitHub repository.
+
+    ```sh
+    git clone https://github.com/HEETLAW/CeaserGuard.git
+    ```
+
+### Step 2: Navigate to the Repository Directory
+
+```sh
+cd CeaserGuard
+```
+
+### Step 3: Ensure Required Libraries are Installed
+
+1. **Install Requirements**:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+### Step 4: Run the Script
+
+You can now run your Caesar Cipher tool. Assuming your main script is named `CeaserGuard.py`, you would run:
+
+```sh
+python CeaserGuard.py
+```
+
+### Step 5: Using the Tool
+
+Follow the prompts provided by the script to use the various functionalities:
+
+1. **Encryption**:
+    - Select `(e)` to encrypt a message.
+    - Enter the message you want to encrypt.
+    - Enter the shift value (for Caesar Cipher).
+
+2. **Decryption**:
+    - Select `(d)` to decrypt a message.
+    - Enter the encrypted message.
+    - Enter the shift value used during encryption.
+
+3. **Encrypt File**:
+    - Select `(ef)` to encrypt a file.
+    - Enter the input file path.
+    - Enter the output file path.
+
+4. **Decrypt File**:
+    - Select `(df)` to decrypt a file.
+    - Enter the input file path.
+    - Enter the output file path.
+
+5. **Save Key**:
+    - Select `(s)` to save the current key to a file.
+
+6. **Load Key**:
+    - Select `(l)` to load a key from a file.
+
+7. **Verify Integrity**:
+    - Select `(v)` to verify the integrity of a file.
+    - Enter the file path to verify integrity.
+
+8. **Quit**:
+    - Select `(q)` to quit the application.
+
+### Example Commands
+
+- To encrypt a message: 
+    ```sh
+    Would you like to (e)encrypt / (d)decrypt / (ef)encrypt file / (df)decrypt file / (s)Save key / (l)load key / (v)verify integrity / (q)quit? e
+    Enter the message to encrypt: hello
+    Enter the shift value: 3
+    ```
+
+- To decrypt a message:
+    ```sh
+    Would you like to (e)encrypt / (d)decrypt / (ef)encrypt file / (df)decrypt file / (s)Save key / (l)load key / (v)verify integrity / (q)quit? d
+    Enter the message to decrypt: khoor
+    Enter the shift value: 3
+    ```
