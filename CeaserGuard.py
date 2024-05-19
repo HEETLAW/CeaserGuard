@@ -1,32 +1,40 @@
 import os
-import random
-import string
 import hashlib
 from cryptography.fernet import Fernet
 
 class CaesarCipher:
     def __init__(self, key=None):
-        self.key = key or self.generate_key()
+        if key is None:
+            if os.path.exists("key.txt"):
+                self.load_key()
+            else:
+                self.key = self.generate_key()
+                self.save_key()
+        else:
+            self.key = key
+        self.cipher = Fernet(self.key)
 
     def generate_key(self):
-        return ''.join(random.choice(string.ascii_letters) for _ in range(16))
+        return Fernet.generate_key()
 
     def encrypt(self, plaintext):
-        cipher = Fernet(self.key.encode())
-        return cipher.encrypt(plaintext.encode()).decode()
+        return self.cipher.encrypt(plaintext.encode()).decode()
 
     def decrypt(self, ciphertext):
-        cipher = Fernet(self.key.encode())
-        return cipher.decrypt(ciphertext.encode()).decode()
+        try:
+            return self.cipher.decrypt(ciphertext.encode()).decode()
+        except Exception as e:
+            return f"Error during decryption: {e}"
 
     def save_key(self, filename="key.txt"):
-        with open(filename, "w") as f:
+        with open(filename, "wb") as f:
             f.write(self.key)
 
     def load_key(self, filename="key.txt"):
         try:
-            with open(filename, "r") as f:
+            with open(filename, "rb") as f:
                 self.key = f.read()
+                self.cipher = Fernet(self.key)
         except FileNotFoundError:
             print("Key file not found.")
 
@@ -65,7 +73,7 @@ def main():
     cipher = CaesarCipher()
 
     while True:
-        choice = input("Would you like to (e)encrypt , (d)decrypt , (ef)encrypt file , (df)decrypt file , (s)Save key , (l)load key , (v)verify integrity ,(q)quit? ").lower()
+        choice = input("Would you like to (e)encrypt / (d)decrypt / (ef)encrypt file / (df)decrypt file / (s)Save key / (l)load key / (v)verify integrity / (q)quit? ").lower()
         if choice == 'q':
             print("Goodbye!")
             break
@@ -93,7 +101,7 @@ def main():
             filename = input("Enter the file path to verify integrity: ")
             print("Integrity verified:", cipher.verify_integrity(filename))
         else:
-          print("Invalid choice. Please try again.")
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
