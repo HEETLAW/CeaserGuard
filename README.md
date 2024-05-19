@@ -25,7 +25,7 @@ This advanced version of the Caesar Cipher program includes the following featur
 
 This advanced version enhances the functionality and usability of the Caesar Cipher program, making it suitable for real-world encryption and decryption tasks, including file encryption and integrity verification.
 
-**How to Get and Use CeaserGuard**
+# **How to Get and Use CeaserGuard**
 
 ### Step 1: Clone the Repository
 
