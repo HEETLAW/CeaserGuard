@@ -50,7 +50,7 @@ Ensure you have Python and the cryptography library installed. If not, you can i
 1. **Install Dependencies:**:
 
     ```sh
-    pip install cryptography
+    bash install.sh
     ```
 
 ### Step 4: Run the Script
@@ -138,7 +138,7 @@ Ensure you have Python and the cryptography library installed. If not, you can i
 1. **Install Dependencies:**:
 
     ```sh
-    pip install cryptography
+    bash install.sh
     ```
 
 ### Step 4: Run the Script
