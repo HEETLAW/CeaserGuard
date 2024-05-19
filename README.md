@@ -113,5 +113,74 @@ Follow the prompts provided by the script to use the various functionalities:
     ```
 # **How to Get and Use Advance_CeaserGuard**
 
+### Step 1: Clone the Repository
 
+1. **Open Terminal**: Open your terminal (Command Prompt, PowerShell, or any terminal you use).
+
+2. **Clone the Repository**: Use the `git clone` command followed by the URL of your GitHub repository.
+
+    ```sh
+    git clone https://github.com/HEETLAW/CeaserGuard.git
+    ```
+
+### Step 2: Navigate to the Repository Directory
+
+```sh
+cd CeaserGuard
+```
+
+### Step 3: Ensure Required Libraries are Installed
+
+1. **Install Requirements**:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+### Step 4: Run the Script
+
+You can now run your Caesar Cipher tool. Assuming your main script is named `Advance_CeaserGuard.py`, you would run:
+
+```sh
+python Advance_CeaserGuard.py
+```
+
+### Step 5: Usage Instructions
+
+   When you run the script, you'll be prompted with several options:
+
+   ```
+   Would you like to (e)encrypt / (d)decrypt / (ef)encrypt file / (df)decrypt file / (s)Save key / (l)load key / (v)verify integrity / (q)quit?
+   ```
+   
+   - **(e)**: Encrypt a message.
+     ```sh
+     Enter the message to encrypt: hello
+     ```
+     
+   - **(d)**: Decrypt a message.
+     ```sh
+     Enter the message to decrypt: <encrypted_message>
+     ```
+     
+   - **(ef)**: Encrypt a file.
+     ```sh
+     Enter the input file path: input.txt
+     Enter the output file path: encrypted_output.txt
+     ```
+     
+   - **(df)**: Decrypt a file.
+     ```sh
+     Enter the input file path: encrypted_output.txt
+     Enter the output file path: decrypted_output.txt
+     ```
+     
+   - **(s)**: Save the encryption key to a file.
+
+   - **(l)**: Load the encryption key from a file.
+
+   - **(v)**: Verify the integrity of a file.
+     ```sh
+     Enter the file path to verify integrity: input.txt
+     ```
 
