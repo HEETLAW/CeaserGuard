@@ -43,12 +43,14 @@ This advanced version enhances the functionality and usability of the Caesar Cip
 cd CeaserGuard
 ```
 
-### Step 3: Ensure Required Libraries are Installed
+### Step 3: Ensure Required Dependencies are Installed
 
-1. **Install Requirements**:
+Ensure you have Python and the cryptography library installed. If not, you can install the cryptography library using pip:
+
+1. **Install Dependencies:**:
 
     ```sh
-    pip install -r requirements.txt
+    pip install cryptography
     ```
 
 ### Step 4: Run the Script
@@ -129,12 +131,14 @@ Follow the prompts provided by the script to use the various functionalities:
 cd CeaserGuard
 ```
 
-### Step 3: Ensure Required Libraries are Installed
+### Step 3: Ensure Required Dependencies are Installed
 
-1. **Install Requirements**:
+Ensure you have Python and the cryptography library installed. If not, you can install the cryptography library using pip:
+
+1. **Install Dependencies:**:
 
     ```sh
-    pip install -r requirements.txt
+    pip install cryptography
     ```
 
 ### Step 4: Run the Script
