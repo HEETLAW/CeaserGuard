@@ -65,7 +65,7 @@ def main():
     cipher = CaesarCipher()
 
     while True:
-        choice = input("Would you like to (e)ncrypt, (d)ecrypt, (ef)ncrypt file, (df)ecrypt file, (s)ave key, (l)oad key, (v)erify integrity, or (q)uit? ").lower()
+        choice = input("Would you like to (e)encrypt /n (d)decrypt /n (ef)encrypt file /n (df)decrypt file /n (s)Save key /n (l)load key /n (v)verify integrity /n  (q)quit? ").lower()
         if choice == 'q':
             print("Goodbye!")
             break
